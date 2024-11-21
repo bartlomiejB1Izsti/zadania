@@ -23,10 +23,10 @@
         $wzrost = isset($_POST['wzrost']) ? (float) $_POST['wzrost'] : 0;
 
         if ($waga > 0 && $wzrost > 0) {
-            // Obliczanie BMI
+    
             $bmi = $waga / ($wzrost * $wzrost);
 
-            // Ocena wyniku
+       
             if ($bmi < 16) {
                 $ocena = "Za mało";
             } elseif ($bmi > 20) {
@@ -35,12 +35,12 @@
                 $ocena = "W normie";
             }
 
-            // Wyświetlanie wyniku
+          
             echo "<h2>Twoje wyniki:</h2>";
             echo "<p>Twoje BMI: <strong>" . round($bmi, 2) . "</strong></p>";
             echo "<p>Kategoria: <strong>" . $ocena . "</strong></p>";
         } else {
-            echo "<p style='color: red;'>Proszę podać prawidłowe wartości wagi i wzrostu!</p>";
+            echo "<p>Proszę podać prawidłowe wartości wagi i wzrostu!</p>";
         }
     }
     ?>
